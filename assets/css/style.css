@@ -1,10 +1,13 @@
 /*---------------------------------General--------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap');
 
 :root {
+  /* general */
   --small-icon-size: 20px;
   --icon-size: 34px;
   --container-max-width: 1120px;
-  --logo-size: 40px;
+  --logo-size: 35px;
+  --font-weight-500: 500;
   --font-weight-600: 600;
   --font-weight-700: 700;
   --color-red: #ed1c24;
@@ -15,6 +18,8 @@
   --font-size-1-5rem: 1.5rem;
   --font-size-2rem: 2rem;
   --padding-top-bottom-3-375rem: 3.375rem;
+  /* pricing height */
+  --pricing-height: 600px;
 }
 @media (max-width: 767px) {
   :root {
@@ -36,7 +41,8 @@ a {
 
 body {
   font-size: 1rem;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
+  background-color: aliceblue;
 }
 .my-container {
   margin-inline: auto;
@@ -122,6 +128,7 @@ body {
 .navbar {
   max-width: var(--container-max-width);
   margin-inline: auto;
+  height: 110px;
 }
 
 .nav-link {
@@ -142,7 +149,6 @@ body {
 
 .swiper {
   width: 100%;
-  max-height: 600px;
 }
 
 .swiper-slide {
@@ -157,8 +163,7 @@ body {
 .swiper-slide img {
   display: block;
   width: 100%;
-  max-height: 600px;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
 }
 
@@ -289,8 +294,8 @@ body {
   word-wrap: break-word;
 }
 .our-client-container {
-  width: 150px;
-  height: 150px;
+  width: 100%;
+
   margin: auto;
 }
 .our-client-img {
@@ -324,6 +329,7 @@ body {
   font-size: calc(var(--font-size-1rem) - 0.2rem);
 }
 .footer-product-service-align {
+  text-align: center;
   list-style: none;
   color: white;
   padding: 0;
@@ -332,11 +338,12 @@ body {
 
 @media (max-width: 768px) {
   .footer-product-service-align {
+    display: block;
     text-align: center;
   }
 }
 .footer-product-service-align li {
-  padding: 5px 0;
+  padding: 5px 0px;
 }
 .footer-product-service-align-2 {
   list-style: none;
@@ -348,10 +355,7 @@ body {
 .footer-product-service-align-2 li {
   padding: 5px 0;
 }
-.footer-border {
-  border-left: 2px solid var(--color-grey);
-  border-right: 2px solid var(--color-grey);
-}
+
 .footer-copyright {
   text-align: center;
   color: white;
@@ -383,7 +387,7 @@ body {
 .price-container {
   width: 100%;
   background-color: #dedede;
-  height: 748px;
+  height: var(--pricing-height);
   box-shadow: 4px 4px 7px 0px rgba(0, 0, 0, 0.25);
   max-width: 265px;
 }
@@ -426,7 +430,7 @@ body {
   display: inline-block;
   color: black;
   font-size: calc(var(--font-size-1rem));
-  font-weight: var(--font-weight-600);
+  font-weight: var(--font-weight-500);
   padding: 8px 0;
 }
 
@@ -435,7 +439,7 @@ body {
 .price-container-white {
   width: 100%;
   background-color: black;
-  height: 748px;
+  height: var(--pricing-height);
   box-shadow: 4px 4px 7px 0px rgba(0, 0, 0, 0.25);
   max-width: 265px;
 }
@@ -487,7 +491,7 @@ body {
   width: 100%;
   max-width: 265px;
   background-color: #b00207;
-  height: 748px;
+  height: var(--pricing-height);
   box-shadow: 4px 4px 7px 0px rgba(0, 0, 0, 0.25);
 }
 .price-container-title-red {
@@ -534,7 +538,7 @@ body {
 .price-container-most-popular {
   position: absolute;
   width: calc(100% + 20px);
-  height: 820px;
+  height: 672px;
   background-color: var(--color-red);
   left: -10px;
   top: -10px;
@@ -565,7 +569,7 @@ body {
 .price-container-purple {
   width: 100%;
   background-color: var(--color-purple);
-  height: 748px;
+  height: var(--pricing-height);
   box-shadow: 4px 4px 7px 0px rgba(0, 0, 0, 0.25);
   max-width: 265px;
 }
@@ -639,9 +643,20 @@ body {
   content: '';
   height: 2px;
   background-color: var(--color-red);
-  width: 78%;
+  width: 80%;
   right: 0%;
   top: 20%;
+}
+@media (max-width: 936px) {
+  .latest-news-title::after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    background-color: var(--color-red);
+    width: 76%;
+    right: 0%;
+    top: 20%;
+  }
 }
 @media (max-width: 768px) {
   .latest-news-title::after {
@@ -649,7 +664,8 @@ body {
   }
   .latest-news-title {
     border-top: 2px solid var(--color-red);
-    margin-top: var(--padding-top-bottom-3-375rem);
+    padding: var(--padding-top-bottom-3-375rem) 0px;
+    text-align: center;
   }
 }
 .news-row-container {
@@ -669,7 +685,6 @@ body {
 .news-container-title span {
   font-size: var(--font-size-1rem);
   font-weight: var(--font-weight-700);
-  text-shadow: 4px 4px 12px black;
 }
 
 /*---------------------------------------------------------------------------------------------------------------------------contact us page------------*/
