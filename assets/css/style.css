@@ -480,6 +480,28 @@ body {
   border-radius: 30px;
   background: linear-gradient(to top, white 75%, var(--color-red) 130%);
 }
+@media (max-width: 1200px) {
+  .pricing-list-1 {
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 30px;
+    padding: 29px;
+  }
+
+  .pricing-list-2 {
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 30px;
+    padding: 29px;
+  }
+  .pricing-list-3 {
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 30px;
+    padding: 29px;
+  }
+  .pricing-list-4 {
+    padding: 29px;
+    position: relative;
+  }
+}
 .pricing-best-value-tag {
   padding: 3px 8px;
   border-radius: 30px;
