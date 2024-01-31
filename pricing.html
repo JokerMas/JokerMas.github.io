@@ -201,23 +201,19 @@
           </div>
           <div class="col-xl-3 col-md-6">
             <div class="pricing-list-2">
-              <div class="pricing-list-title">Normal</div>
+              <div class="pricing-list-title">Basic</div>
               <div class="pricing-list-description">
                 Learn how to create your first app without code.
               </div>
               <div class="pricing-list-price" id="pricing-list-price">
                 $399
                 <div class="pricing-list-start-at">Starting at</div>
-                <div class="pricing-list-bill">
-                  per month<br />billed yearly
-                </div>
+                <div class="pricing-list-bill">Year</div>
               </div>
               <div class="pricing-list-price2" id="pricing-list-price2">
-                $299
+                $39
                 <div class="pricing-list-start-at">Starting at</div>
-                <div class="pricing-list-bill">
-                  per month<br />billed yearly
-                </div>
+                <div class="pricing-list-bill">Month</div>
               </div>
               <button class="pricing-list-button">Contact Us</button>
               <ul class="pricing-list-ul">
@@ -232,23 +228,19 @@
           </div>
           <div class="col-xl-3 col-md-6">
             <div class="pricing-list-3">
-              <div class="pricing-list-title">Premium</div>
+              <div class="pricing-list-title">Standard</div>
               <div class="pricing-list-description">
                 Learn how to create your first app without code.
               </div>
               <div class="pricing-list-price" id="pricing-list-price">
                 $699
                 <div class="pricing-list-start-at">Starting at</div>
-                <div class="pricing-list-bill">
-                  per month<br />billed yearly
-                </div>
+                <div class="pricing-list-bill">Year</div>
               </div>
               <div class="pricing-list-price2" id="pricing-list-price2">
-                $599
+                $69
                 <div class="pricing-list-start-at">Starting at</div>
-                <div class="pricing-list-bill">
-                  per month<br />billed yearly
-                </div>
+                <div class="pricing-list-bill">Month</div>
               </div>
               <button class="pricing-list-button">Contact Us</button>
               <ul class="pricing-list-ul">
@@ -263,24 +255,20 @@
           </div>
           <div class="col-xl-3 col-md-6">
             <div class="pricing-list-4">
-              <div class="pricing-best-value-tag">Best value</div>
-              <div class="pricing-list-title">Business</div>
+              <div class="pricing-best-value-tag">Standard</div>
+              <div class="pricing-list-title">Premium</div>
               <div class="pricing-list-description">
                 Learn how to create your first app without code.
               </div>
               <div class="pricing-list-price" id="pricing-list-price">
                 $999
                 <div class="pricing-list-start-at">Starting at</div>
-                <div class="pricing-list-bill">
-                  per month<br />billed yearly
-                </div>
+                <div class="pricing-list-bill">Year</div>
               </div>
               <div class="pricing-list-price2" id="pricing-list-price2">
-                $799
+                $99
                 <div class="pricing-list-start-at">Starting at</div>
-                <div class="pricing-list-bill">
-                  per month<br />billed yearly
-                </div>
+                <div class="pricing-list-bill">Month</div>
               </div>
               <button class="pricing-list-button">Contact Us</button>
               <ul class="pricing-list-ul">
@@ -380,6 +368,7 @@
       var btn2 = document.getElementById('pricing-monthly-button');
       var text1 = document.querySelectorAll('#pricing-list-price');
       var text2 = document.querySelectorAll('#pricing-list-price2');
+      var text3 = document.querySelectorAll('.pricing-list-bill');
 
       btn1.addEventListener('click', function () {
         text1.forEach(function (e) {
@@ -388,6 +377,9 @@
         text2.forEach(function (e) {
           e.style.display = 'none';
         });
+        text3.forEach(function (e) {
+          e.style.left = '90px';
+        });
         btn.style.left = '0';
       });
       btn2.addEventListener('click', function () {
@@ -395,7 +387,10 @@
           e.style.display = 'none';
         });
         text2.forEach(function (e) {
-          e.style.display = 'block';
+          e.style.display = 'flex';
+        });
+        text3.forEach(function (e) {
+          e.style.left = '70px';
         });
         btn.style.left = '50%';
       });
